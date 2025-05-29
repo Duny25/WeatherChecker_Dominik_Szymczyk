@@ -1,0 +1,39 @@
+[
+  {
+    "ContainingType": "WeatherChecker_Dominik_Szymczyk.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "account",
+        "Type": "WeatherChecker_Dominik_Szymczyk.Models.Account",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WeatherChecker_Dominik_Szymczyk.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WeatherChecker_Dominik_Szymczyk.WeatherForecast, WeatherChecker_Dominik_Szymczyk, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]

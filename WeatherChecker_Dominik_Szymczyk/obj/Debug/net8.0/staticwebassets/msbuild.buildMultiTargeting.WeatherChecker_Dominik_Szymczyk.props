@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WeatherChecker_Dominik_Szymczyk.props" />
+</Project>
