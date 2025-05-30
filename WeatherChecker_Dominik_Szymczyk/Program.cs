@@ -8,11 +8,16 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using WeatherChecker_Dominik_Szymczyk.Services;
+using WeatherChecker_Dominik_Szymczyk.Repositories;
+using WeatherChecker_Dominik_Szymczyk.Middlewares;
+using WeatherChecker_Dominik_Szymczyk.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Rejestracja serwisu do generowania tokenów JWT
 builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
+
+builder.Services.AddSingleton<UserRepository>();
 
 // Dodanie kontrolerów
 builder.Services.AddControllers();
@@ -77,6 +82,9 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+app.UseMiddleware<WeatherChecker_Dominik_Szymczyk.Middlewares.RateLimitMiddleware>();
+
+
 // Swagger tylko w trybie developerskim
 if (app.Environment.IsDevelopment())
 {
@@ -85,6 +93,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseRequestLogging();
+
+app.UseSqlInjectionProtection();
 
 app.UseAuthentication(); // Uwierzytelnianie JWT
 app.UseAuthorization();  // Autoryzacja

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeatherChecker_Dominik_Szymczyk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3cb1c060bc999b7dd57757e398fde0260a62f7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeatherChecker_Dominik_Szymczyk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeatherChecker_Dominik_Szymczyk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

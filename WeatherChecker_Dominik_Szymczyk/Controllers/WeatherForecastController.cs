@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
+
+
 namespace WeatherChecker_Dominik_Szymczyk.Controllers ;
 
 [ApiController]
